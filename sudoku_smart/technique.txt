@@ -1,0 +1,6 @@
+- first fill in all forced cells, then reevaluate possibilities of the other cells and try guessing (virgin cell sweep)
+- find number of possibilities for each cell when you make a guess, then try guessing for the cell with the least possibilities
+
+1) make a guess for a cell
+2) observe effects in its immediate neighbors by removing their guesses
+3) keep repeating this for all affected neighbors until the board settles down (no more effects to neighbors)

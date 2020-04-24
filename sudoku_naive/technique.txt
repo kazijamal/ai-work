@@ -1,0 +1,22 @@
+1. For each cell store some data:
+    - is it solved or unsolved?
+    - what are the possible values?
+      - answer this question by seeing if the possibility appears in neighbors
+    - check if there is only one possibility
+    
+2. Start at cell 0.
+
+3. Save a copy of the current board to a stack data structure (if there is more than one possibility left to guess) before guessing a possibility.
+
+4. Choose the first possibility for a cell, and then move on to the next cell.
+
+5. If there is no solution for a cell, backtrack to last position where there is more than one possibility (by popping from the stack data structure), eliminate the possibility you used, and try to next possibility.
+
+6. When finished with all cells, check if the board is solved.
+
+7. Save the amount of time solving the board took using the Python time library.
+   - time.time() at the beginning and end of algorithm and find the difference
+
+8. Save the number of times you had to backtrack.
+
+* create a function to see if a board is solved

@@ -1,0 +1,7 @@
+add,harry,blue,4
+delete,harry
+add,alex,green,2
+add,mary,yellow,1
+add,jake,indigo,2
+change_cat,2,3
+print
