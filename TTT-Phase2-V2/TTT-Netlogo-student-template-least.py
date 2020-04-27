@@ -102,8 +102,8 @@ def IsEndBoard(board):
     for awin in wins:
         if board[awin[0]] != '_' and board[awin[0]] == board[awin[1]] and board[awin[1]] == board[awin[2]]:
             return board[awin[0]]
-        if board.count('_') == 0:
-            return 'd'
+    if board.count('_') == 0:
+        return 'd'
     return None
 
 def PrintBoardNode(node):
