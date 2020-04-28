@@ -95,13 +95,12 @@ def FindAllBoards(board_node):
 
 def minimax(board_node, maximize, moves):
     state = board_node.state
-    if state is not None:
-        if state == board_node.player:
-            return [1, moves, board_node]
-        elif state == board_node.opponent:
-            return [-1, moves, board_node]
-        elif state == 'd':
-            return [0, moves, board_node]
+    if state == board_node.player:
+        return [1, moves, board_node]
+    elif state == board_node.opponent:
+        return [-1, moves, board_node]
+    elif state == 'd':
+        return [0, moves, board_node]
     else:
         if maximize:
             best_score = -2
@@ -127,7 +126,6 @@ def CalcBestMove(board_node):
     '''  updates this board_node with correct values for state, moves_to_state, and best_move
     (This is the engine.)'''
     best_score = -2
-    best_move = None
     for child in board_node.children:
         curr_score = minimax(child, True, 0)
         if curr_score[0] > best_score:
